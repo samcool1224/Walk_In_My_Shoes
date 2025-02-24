@@ -6,6 +6,8 @@
 //
 import SwiftUI
 import CoreHaptics
+@available(iOS 13, *)
+
 class HapticManager {
     static let shared = HapticManager()
     private var engine: CHHapticEngine?

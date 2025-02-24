@@ -14,6 +14,7 @@ public enum SimulationType {
 }
 
 // Enhanced Button Components
+@available(iOS 13, *)
 public struct AudioControlButton: View {
     let icon: String
     let text: String
