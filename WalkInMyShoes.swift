@@ -1,7 +1,7 @@
 // The Swift Programming Language
 // https://docs.swift.org/swift-book
 import SwiftUI
-@available(iOS 13, *)
+@available(iOS 14, *)
 @main
 struct WalkInMyShoesApp: App {
     @AppStorage("uiTheme") private var uiTheme: Int = 1

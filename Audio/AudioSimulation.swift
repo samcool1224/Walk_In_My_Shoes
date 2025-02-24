@@ -5,7 +5,7 @@
 //  Created by Samaksh Bhargav on 2/24/25.
 //
 import SwiftUI
-@available(iOS 13, *)
+@available(iOS 14, *)
 
 struct AudioSimulationView: View {
     let chapters: [AudioChapter] = [

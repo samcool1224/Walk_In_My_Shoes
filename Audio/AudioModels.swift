@@ -6,6 +6,7 @@
 //
 import SwiftUI
 import AVFoundation
+@available(iOS 14, *)
 public enum SimulationType {
     case normal
     case suddenLoss
