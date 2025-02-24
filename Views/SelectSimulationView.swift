@@ -51,7 +51,7 @@ struct SelectSimulationView: View {
                         NavigationLink(
                             destination: destination(for: index),
                             label: {
-                                Image(UIImage(names:pages[index], in .module, with : nil))
+                                Image(UIImage(named: pages[index], in: .module, with: nil))
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .padding(.horizontal, 0)
