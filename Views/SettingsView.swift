@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-@available(iOS 14, *)
+@available(iOS 17, *)
 struct SettingsView: View {
     @AppStorage("uiTheme") private var uiTheme: Int = 0
     @AppStorage("fontSize") private var fontSize: Double = 20

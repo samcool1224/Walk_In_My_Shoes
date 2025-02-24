@@ -5,7 +5,7 @@
 //  Created by Samaksh Bhargav on 2/23/25.
 //
 import Foundation
-@available(iOS 14, *)
+@available(iOS 17, *)
 
 struct Stage: Identifiable {
     let id = UUID()

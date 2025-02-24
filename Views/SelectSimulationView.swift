@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-@available(iOS 14, *)
+@available(iOS 17, *)
 struct SelectSimulationView: View {
     @State private var selectedPage = 0
     let pages = ["visual", "audio"]

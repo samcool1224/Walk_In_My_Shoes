@@ -1,5 +1,5 @@
 import SwiftUI
-@available(iOS 14, *)
+@available(iOS 17, *)
 public struct ConfettiView: UIViewRepresentable {
     @Binding var isVisible: Bool
     

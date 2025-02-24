@@ -8,7 +8,7 @@ import SwiftUI
 import RealityKit
 import ARKit
 import Combine
-@available(iOS 14, *)
+@@available(iOS 17, *)
 struct VisionView: View {
     // Expanded stages for roughly 3 minutes of exploration (Complaint 4)
     let stages: [Stage] = [

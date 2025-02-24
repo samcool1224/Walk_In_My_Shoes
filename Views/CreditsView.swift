@@ -5,7 +5,7 @@
 //  Created by Samaksh Bhargav on 2/24/25.
 //
 import SwiftUI
-@available(iOS 14, *)
+@available(iOS 17, *)
 struct CreditsView: View {
     @Environment(\.colorScheme) var systemColorScheme
 

@@ -8,7 +8,7 @@ import SwiftUI
 import RealityKit
 import ARKit
 import Combine
-@available(iOS 14, *)
+@available(iOS 17, *)
 class TunnelVisionView: UIView {
     var clearRadius: CGFloat = 60
     
