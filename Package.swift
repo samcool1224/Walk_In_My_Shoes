@@ -18,9 +18,10 @@ let package = Package(
             name: "WalkInMyShoes",
             path: ".",
             resources: [
-            .process("Assets.xcaassets")
-            .process("Fonts")
-            ],)
+                .process("Assets.xcaassets"),
+                .process("Fonts")
+            ]
+        ),
         .testTarget(
             name: "WalkInMyShoesTests",
             dependencies: ["WalkInMyShoes"]
