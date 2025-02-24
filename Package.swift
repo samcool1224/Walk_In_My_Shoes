@@ -16,10 +16,11 @@ let package = Package(
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "WalkInMyShoes",
-            path: "Sources",
-        resources: [
+            path: ".",
+            resources: [
             .process("Assets.xcaassets")
-        ])
+            .process("Fonts")
+            ],)
         .testTarget(
             name: "WalkInMyShoesTests",
             dependencies: ["WalkInMyShoes"]
