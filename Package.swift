@@ -1,4 +1,6 @@
-// swift-tools-version:5.5  // Adding this line to specify Swift version
+// swift-tools-version: 6.0
+// The swift-tools-version declares the minimum version of Swift required to build this package.
+
 import PackageDescription
 
 let package = Package(
@@ -8,16 +10,16 @@ let package = Package(
             name: "WalkInMyShoes",
             targets: ["WalkInMyShoes"]),
     ],
-    dependencies: [  // Moving dependencies to package level
+    dependencies: [
         .package(url: "https://github.com/samcool1224/Walk_In_My_Shoes.git", from: "1.0.0")
     ],
     targets: [
         .target(
             name: "WalkInMyShoes",
-            dependencies: ["WalkInMyShoes"],  // Adding dependencies to target
+            dependencies: ["WalkInMyShoes"],
             path: ".",
             resources: [
-                .process("Assets.xcassets"),  // Added missing comma
+                .process("Assets.xcassets"),
                 .process("Fonts")
             ]
         ),
