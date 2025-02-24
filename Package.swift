@@ -18,7 +18,7 @@ let package = Package(
             name: "WalkInMyShoes",
             path: ".",
             resources: [
-                .process("Assets.xcaassets"),
+                .copy("Assets.xcaassets"),
                 .process("Fonts")
             ]
         ),
