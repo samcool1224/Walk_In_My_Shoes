@@ -2,7 +2,7 @@
 // https://docs.swift.org/swift-book
 import SwiftUI
 @available(iOS 17, *)
-public struct WalkInMyShoesView: View {
+public struct WalkInMyShoesApp: View {
     @AppStorage("uiTheme") private var uiTheme: Int = 1
     
     public init() {}
