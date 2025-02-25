@@ -254,7 +254,7 @@ class AudioProcessor {
         playerNode.scheduleFile(audioFile, at: nil)
         playerNode.play()
     }
-    
+    @MainActor
     func playWithTinnitus() {
         guard let audioFile = audioFile else {
             print("No audio file available")
@@ -320,11 +320,11 @@ class AudioProcessor {
         tinnitusSoundNode.play()
         
         // Schedule automatic stop after duration
-        DispatchQueue.main.asyncAfter(deadline: .now() + audioDuration) { [weak self] in
-            guard let self = self else { return }
-            
-            DispatchQueue.main.async {
-                self.stop()
+        let duration = audioDuration
+        Task { [weak self] in
+            try? await Task.sleep(nanoseconds: UInt64(duration * 1_000_000_000))
+            await MainActor.run {
+                self?.stop()
             }
         }
     }
