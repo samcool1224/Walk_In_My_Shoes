@@ -5,7 +5,7 @@
 //  Created by Samaksh Bhargav on 2/23/25.
 //
 import SwiftUI
-@available(iOS 17, *)
+@available(iOS 13, *)
 struct WelcomeView: View {
     @AppStorage("uiTheme") private var uiTheme: Int = 1
     @Environment(\.colorScheme) var colorScheme: ColorScheme

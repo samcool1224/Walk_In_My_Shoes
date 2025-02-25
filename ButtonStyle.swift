@@ -5,7 +5,7 @@
 //  Created by Samaksh Bhargav on 2/23/25.
 //
 import SwiftUI
-@available(iOS 17, *)
+@available(iOS 13, *)
 
 public struct PrimaryButtonStyle: ButtonStyle {
     let colors: [Color]

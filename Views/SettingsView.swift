@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-@available(iOS 17, *)
+@available(iOS 13, *)
 struct SettingsView: View {
     @AppStorage("uiTheme") private var uiTheme: Int = 0
     @AppStorage("fontSize") private var fontSize: Double = 20
@@ -110,7 +110,7 @@ struct SettingsView: View {
         }
     }
 }
-@available(iOS 17, *)
+@available(iOS 13, *)
 struct SettingsSectionView<Content: View>: View {
     let title: String
     let content: Content

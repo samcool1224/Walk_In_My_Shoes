@@ -6,7 +6,7 @@
 //
 import SwiftUI
 import AVFoundation
-@available(iOS 17, *)
+@available(iOS 13, *)
 public enum SimulationType {
     case normal
     case suddenLoss
@@ -15,7 +15,7 @@ public enum SimulationType {
 }
 
 // Enhanced Button Components
-@available(iOS 17, *)
+@available(iOS 13, *)
 public struct AudioControlButton: View {
     let icon: String
     let text: String
@@ -78,7 +78,7 @@ public struct NavigationButton: View {
 
 
 // MARK: - Updated Audio Manager with Enhanced Recording Management
-@available(iOS 17, *)
+@available(iOS 13, *)
 @MainActor
 class AudioManager: ObservableObject {
     static let shared = AudioManager()
@@ -123,7 +123,7 @@ class AudioManager: ObservableObject {
 }
 
 // MARK: Audio Class
-@available(iOS 17, *)
+@available(iOS 13, *)
 class AudioProcessor {
     private var audioEngine: AVAudioEngine
     private var playerNode: AVAudioPlayerNode

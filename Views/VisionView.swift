@@ -8,7 +8,7 @@ import SwiftUI
 import RealityKit
 import ARKit
 import Combine
-@available(iOS 17, *)
+@available(iOS 13, *)
 struct VisionView: View {
     // Expanded stages for roughly 3 minutes of exploration (Complaint 4)
     let stages: [Stage] = [
@@ -233,7 +233,7 @@ struct VisionView: View {
                 )
         }
     }
-@available(iOS 17, *)
+@available(iOS 13, *)
     struct QuizButton: View {
         let text: String
         let isSelected: Bool
@@ -260,7 +260,7 @@ struct VisionView: View {
             .animation(.spring(), value: isSelected)
         }
     }
-@available(iOS 17, *)
+@available(iOS 13, *)
     struct StartSimulationButton: View {
         let action: () -> Void
         
@@ -285,7 +285,7 @@ struct VisionView: View {
             }
         }
     }
-@available(iOS 17, *)
+@available(iOS 13, *)
     struct NextStageButton: View {
         let action: () -> Void
         
@@ -312,7 +312,7 @@ struct VisionView: View {
             }
         }
     }
-@available(iOS 17, *)
+@available(iOS 13, *)
     struct RetryButton: View {
         let action: () -> Void
         
@@ -340,7 +340,7 @@ struct VisionView: View {
         }
     }
 
-@available(iOS 17, *)
+@available(iOS 13, *)
     extension Color {
         init(hex: String) {
             let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)

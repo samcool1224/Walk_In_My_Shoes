@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-@available(iOS 14, *)
+@available(iOS 13, *)
 // ContentView now presents the welcome screen.
 struct ContentView: View {
     var body: some View {
