@@ -96,7 +96,7 @@ class AudioManager: ObservableObject {
         isRecording = false
         hasRecording = true
     }
-    
+    @available(iOS 17, *)
     func playSimulation(for simulationType: AudioChapter.SimulationType) {
         guard hasRecording else { return }
         

@@ -6,7 +6,7 @@
 //
 import SwiftUI
 @available(iOS 13, *)
-
+@available(iOS 17, *)
 struct AudioSimulationView: View {
     let chapters: [AudioChapter] = [
         AudioChapter(
@@ -34,11 +34,14 @@ struct AudioSimulationView: View {
             simulationType: .tinnitus
         )
     ]
+    @available(iOS 13, *)
     let brightYellow = Color(hex: "fdff8f")
     @State private var currentChapterIndex = 0
     @State private var isRecording = false
     @State private var hasRecording = false
+    @available(iOS 17, *)
     @StateObject private var audioManager = AudioManager.shared
+    @available(iOS 13, *)
     @State private var cardOffset: CGFloat = 1000
     @State private var cardOpacity: Double = 0
     
@@ -90,7 +93,7 @@ struct AudioSimulationView: View {
                 
                 Spacer()
                 
-                // Enhanced Audio Control Panel
+                @available(iOS 17, *)
                 GlassCard {
                     VStack(spacing: 20) {
                         if !hasRecording {
@@ -119,7 +122,6 @@ struct AudioSimulationView: View {
                                 )
                             }
                         }
-                        
                         // Chapter Navigation
                         HStack(spacing: 20) {
                             NavigationButton(
@@ -144,7 +146,9 @@ struct AudioSimulationView: View {
             }
         }
         .navigationBarBackButtonHidden(false)
+        @available(iOS 14, *)
         .navigationBarTitleDisplayMode(.inline)
+        @available(iOS 13, *)
         .onAppear {
             withAnimation(.spring()) {
                 cardOffset = 0
