@@ -8,7 +8,7 @@
 import SwiftUI
 @available(iOS 17, *)
 // ContentView now presents the welcome screen.
-pubilc struct ContentView: View {
+public struct ContentView: View {
     public var body: some View {
         WelcomeView()
     }
