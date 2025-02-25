@@ -3,10 +3,11 @@
 import SwiftUI
 @available(iOS 17, *)
 
-struct WalkInMyShoesApp: App {
+public struct WalkInMyShoesApp: App {
+    public init() {}
     @AppStorage("uiTheme") private var uiTheme: Int = 1
 
-    var body: some SwiftUI.Scene {
+    public var body: some SwiftUI.Scene {
         let theme: ColorScheme? = uiTheme == 2 ? .dark : (uiTheme == 1 ? .light : nil)
         
         return WindowGroup {
