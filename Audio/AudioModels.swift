@@ -321,8 +321,10 @@ class AudioProcessor {
         
         // Schedule automatic stop after duration
         DispatchQueue.main.asyncAfter(deadline: .now() + audioDuration) { [weak self] in
-            DispatchQueue.main.sync {
-                self?.stop()
+            guard let self = self else { return }
+            
+            DispatchQueue.main.async {
+                self.stop()
             }
         }
     }

@@ -7,7 +7,7 @@
 import SwiftUI
 import CoreHaptics
 @available(iOS 17, *)
-@Sendable
+@MainActor
 class HapticManager {
     static let shared = HapticManager()
     private var engine: CHHapticEngine?
