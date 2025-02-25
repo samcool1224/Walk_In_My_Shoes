@@ -6,10 +6,10 @@
 //
 import SwiftUI
 @available(iOS 17, *)
-struct CreditsView: View {
+pubilc struct CreditsView: View {
     @Environment(\.colorScheme) var systemColorScheme
 
-    var body: some View {
+    public var body: some View {
         ZStack {
             LinearGradient(
                 colors: [Color(.systemBackground), Color(.secondarySystemBackground)],

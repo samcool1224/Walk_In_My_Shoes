@@ -7,11 +7,11 @@
 
 import SwiftUI
 @available(iOS 17, *)
-struct SelectSimulationView: View {
+public struct SelectSimulationView: View {
     @State private var selectedPage = 0
     let pages = ["visual", "audio"]
     
-    var body: some View {
+    public var body: some View {
         ZStack {
             LinearGradient(
                 colors: [Color(.systemBackground), Color(.secondarySystemBackground)],
