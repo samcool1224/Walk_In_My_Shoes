@@ -8,7 +8,7 @@ import SwiftUI
 import RealityKit
 import ARKit
 import Combine
-@available(iOS 13, *)
+@available(iOS 17, *)
 class TunnelVisionView: UIView {
     var clearRadius: CGFloat = 60
     
@@ -35,7 +35,7 @@ class TunnelVisionView: UIView {
     }
 }
 
-@available(iOS 13, *)
+@available(iOS 17, *)
 class ScotomaView: UIView {
     var scotomaRadius: CGFloat = 80
     
@@ -61,7 +61,7 @@ class ScotomaView: UIView {
     }
 }
 
-@available(iOS 13, *)
+@available(iOS 17, *)
 class GlaucomaView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -83,7 +83,7 @@ class GlaucomaView: UIView {
     }
 }
 
-@available(iOS 13, *)
+@available(iOS 17, *)
 class CataractsView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -92,11 +92,11 @@ class CataractsView: UIView {
     
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 }
-@available(iOS 13, *)
+@available(iOS 17, *)
 enum ImpairmentType {
     case none, tunnelVision, auditoryDistortion, cataract, macularDegeneration, glaucoma, presbycusis
 }
-@available(iOS 13, *)
+@available(iOS 17, *)
 struct ARViewContainer: UIViewRepresentable {
     var selectedImpairment: ImpairmentType
     func makeUIView(context: Context) -> ARView {
