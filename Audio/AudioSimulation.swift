@@ -146,9 +146,7 @@ struct AudioSimulationView: View {
             }
         }
         .navigationBarBackButtonHidden(false)
-        @available(iOS 14, *)
         .navigationBarTitleDisplayMode(.inline)
-        @available(iOS 13, *)
         .onAppear {
             withAnimation(.spring()) {
                 cardOffset = 0

@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-@available(iOS 13, *)
+@available(iOS 17, *)
 struct SettingsView: View {
     @AppStorage("uiTheme") private var uiTheme: Int = 0
     @AppStorage("fontSize") private var fontSize: Double = 20
@@ -19,7 +19,6 @@ struct SettingsView: View {
     @State private var showingVolumeWarning = false
     
     @Environment(\.colorScheme) var systemColorScheme
-    
     var body: some View {
         ZStack {
             LinearGradient(
@@ -42,7 +41,6 @@ struct SettingsView: View {
         .navigationBarTitleDisplayMode(.inline)
         .preferredColorScheme(uiTheme == 0 ? .light : .dark)
     }
-    
     private var headerSection: some View {
         Text("Settings")
             .font(.system(size: 36, weight: .bold, design: .rounded))
@@ -110,7 +108,6 @@ struct SettingsView: View {
         }
     }
 }
-@available(iOS 13, *)
 struct SettingsSectionView<Content: View>: View {
     let title: String
     let content: Content
