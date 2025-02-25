@@ -10,7 +10,7 @@ public struct WelcomeView: View {
     @AppStorage("uiTheme") private var uiTheme: Int = 1
     @Environment(\.colorScheme) var colorScheme: ColorScheme
     
-    var body: some View {
+    public var body: some View {
         // Set the theme based on user preference or default to system appearance (colorScheme)
         let theme: ColorScheme = uiTheme == 2 ? .dark : (uiTheme == 1 ? .light : colorScheme)
         
