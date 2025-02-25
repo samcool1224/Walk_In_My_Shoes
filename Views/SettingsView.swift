@@ -108,6 +108,7 @@ struct SettingsView: View {
         }
     }
 }
+@available(iOS 17, *)
 struct SettingsSectionView<Content: View>: View {
     let title: String
     let content: Content
