@@ -6,7 +6,7 @@
 //
 import SwiftUI
 @available(iOS 17, *)
-pubilc struct CreditsView: View {
+public struct CreditsView: View {
     @Environment(\.colorScheme) var systemColorScheme
 
     public var body: some View {
