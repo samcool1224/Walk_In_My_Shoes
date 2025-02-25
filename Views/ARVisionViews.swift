@@ -35,7 +35,7 @@ class TunnelVisionView: UIView {
     }
 }
 
-// 2. Macular Degeneration - Scotoma Simulation
+@available(iOS 17, *)
 class ScotomaView: UIView {
     var scotomaRadius: CGFloat = 80
     
@@ -61,7 +61,7 @@ class ScotomaView: UIView {
     }
 }
 
-// 3. Glaucoma - Smooth Gradient Peripheral Vision Loss
+@available(iOS 17, *)
 class GlaucomaView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -83,7 +83,7 @@ class GlaucomaView: UIView {
     }
 }
 
-// 4. Cataracts - Blurred Vision Overlay
+@available(iOS 17, *)
 class CataractsView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -92,36 +92,11 @@ class CataractsView: UIView {
     
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 }
-
-// 5. Diabetic Retinopathy - Random Dark Spots
-class DiabeticRetinopathyView: UIView {
-    let spotCount = 10 // Number of spots
-    let maxSize: CGFloat = 50
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        backgroundColor = .clear
-    }
-    
-    required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
-    
-    override func draw(_ rect: CGRect) {
-        guard let context = UIGraphicsGetCurrentContext() else { return }
-        
-        for _ in 0..<spotCount {
-            let size = CGFloat.random(in: 20...maxSize)
-            let x = CGFloat.random(in: 0...rect.width - size)
-            let y = CGFloat.random(in: 0...rect.height - size)
-            let spotRect = CGRect(x: x, y: y, width: size, height: size)
-            
-            context.setFillColor(UIColor.black.withAlphaComponent(0.8).cgColor)
-            context.fillEllipse(in: spotRect)
-        }
-    }
-}
+@available(iOS 17, *)
 enum ImpairmentType {
     case none, tunnelVision, auditoryDistortion, cataract, macularDegeneration, glaucoma, presbycusis
 }
+@available(iOS 17, *)
 struct ARViewContainer: UIViewRepresentable {
     var selectedImpairment: ImpairmentType
     func makeUIView(context: Context) -> ARView {

@@ -79,6 +79,7 @@ public struct NavigationButton: View {
 
 // MARK: - Updated Audio Manager with Enhanced Recording Management
 @available(iOS 17, *)
+@MainActor
 class AudioManager: ObservableObject {
     static let shared = AudioManager()
     private let audioProcessor = AudioProcessor()

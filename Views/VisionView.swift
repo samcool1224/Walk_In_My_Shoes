@@ -207,7 +207,7 @@ struct VisionView: View {
         }
     }
 
-    // Custom UI Components
+
     struct GlassCard<Content: View>: View {
         let content: Content
         
