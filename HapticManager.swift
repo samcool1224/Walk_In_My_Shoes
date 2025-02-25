@@ -6,7 +6,7 @@
 //
 import SwiftUI
 import CoreHaptics
-@available(iOS 13, *)
+@available(iOS 17, *)
 
 class HapticManager {
     static let shared = HapticManager()

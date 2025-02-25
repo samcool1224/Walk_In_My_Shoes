@@ -5,7 +5,6 @@
 //  Created by Samaksh Bhargav on 2/24/25.
 //
 import SwiftUI
-@available(iOS 13, *)
 @available(iOS 17, *)
 struct AudioSimulationView: View {
     let chapters: [AudioChapter] = [
@@ -34,14 +33,11 @@ struct AudioSimulationView: View {
             simulationType: .tinnitus
         )
     ]
-    @available(iOS 13, *)
     let brightYellow = Color(hex: "fdff8f")
     @State private var currentChapterIndex = 0
     @State private var isRecording = false
     @State private var hasRecording = false
-    @available(iOS 17, *)
     @StateObject private var audioManager = AudioManager.shared
-    @available(iOS 13, *)
     @State private var cardOffset: CGFloat = 1000
     @State private var cardOpacity: Double = 0
     
@@ -93,7 +89,6 @@ struct AudioSimulationView: View {
                 
                 Spacer()
                 
-                @available(iOS 17, *)
                 GlassCard {
                     VStack(spacing: 20) {
                         if !hasRecording {
