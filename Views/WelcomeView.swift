@@ -7,6 +7,7 @@
 import SwiftUI
 @available(iOS 17, *)
 public struct WelcomeView: View {
+    public init(){}
     @AppStorage("uiTheme") private var uiTheme: Int = 1
     @Environment(\.colorScheme) var colorScheme: ColorScheme
     
