@@ -15,7 +15,7 @@ public enum SimulationType {
 }
 
 // Enhanced Button Components
-@available(iOS 13, *)
+@available(iOS 17, *)
 public struct AudioControlButton: View {
     let icon: String
     let text: String
@@ -47,6 +47,7 @@ public struct AudioControlButton: View {
         }
     }
 }
+@available(iOS 17, *)
 public struct NavigationButton: View {
     let icon: String
     let colors: [Color]
@@ -77,6 +78,7 @@ public struct NavigationButton: View {
 
 
 // MARK: - Updated Audio Manager with Enhanced Recording Management
+@available(iOS 17, *)
 class AudioManager: ObservableObject {
     static let shared = AudioManager()
     private let audioProcessor = AudioProcessor()
@@ -120,6 +122,7 @@ class AudioManager: ObservableObject {
 }
 
 // MARK: Audio Class
+@available(iOS 17, *)
 class AudioProcessor {
     private var audioEngine: AVAudioEngine
     private var playerNode: AVAudioPlayerNode

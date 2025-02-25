@@ -15,7 +15,7 @@ struct Stage: Identifiable {
     let options: [String]
     let correctAnswer: String
 }
-
+@available(iOS 17, *)
 struct AudioChapter {
     let title: String
     let narrative: String
